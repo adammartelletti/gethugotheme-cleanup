@@ -80,7 +80,7 @@ awk 'BEGIN {updated = 0} /hasCJKLanguage/ && !updated {sub(/true/, "false"); upd
 # Update the default image quality setting in the config.toml file
 awk 'BEGIN {updated = 0} /quality =/ && !updated {sub(/100/, "75"); updated = 1} {print}' config/_default/config.toml > config/_default/config.tmp && mv config/_default/config.tmp config/_default/config.toml
 
-# Update the default image quality setting in the config.toml file
+# Update the default disqusShortname setting in the config.toml file
 awk 'BEGIN {updated = 0} /disqusShortname =/ && !updated {sub(/themefisher-template/, ""); updated = 1} {print}' config/_default/config.toml > config/_default/config.tmp && mv config/_default/config.tmp config/_default/config.toml
 
 # Check if the config.toml file exists
